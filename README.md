@@ -10,4 +10,10 @@ Just clone the repo and change any file or class name to your needs , mostly you
 Themes can be customized in their files both light and dark found under assets/themes
 
 ### Locale
+Locale can be added to the folder locale and the added sub folder name reflect the locale
+also add the new locale code to the 
+```
+AppTranslatios class
+```
+
 
