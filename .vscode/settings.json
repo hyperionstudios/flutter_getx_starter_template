@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 12,
+    "debug.console.fontSize": 12,
+    "editor.letterSpacing": 0.3,
+    "editor.lineHeight": 1.5,
+    "editor.renderLineHighlight": "line",
+    "editor.unfoldOnClickAfterEndOfLine": true,
+    "editor.defaultFormatter": "wwm.better-align"
+}

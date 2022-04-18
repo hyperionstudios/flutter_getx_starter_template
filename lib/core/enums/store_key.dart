@@ -1,0 +1,1 @@
+enum StoreKey { workDir }

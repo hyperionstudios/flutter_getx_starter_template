@@ -1,0 +1,19 @@
+{
+  "info": {},
+  "base": {
+    "local": "",
+    "staging": "",
+    "production": ""
+  },
+  "auth": {
+    "signup": "",
+    "signin": "",
+    "request_email": "",
+    "request_reset": "",
+    "reset_password": "",
+    "logout": "",
+    "refresh_token": ""
+  },
+  "payments": {},
+  "models": {}
+}
