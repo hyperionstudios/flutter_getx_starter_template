@@ -12,25 +12,26 @@ class SecureStore implements CoreStore {
 
   @override
   clear() async {
-    // TODO: implement clear
-    throw UnimplementedError();
+    await _flutterSecureStorage.deleteAll();
   }
 
   @override
   remove(StoreKey key) async {
-    // TODO: implement remove
-    throw UnimplementedError();
+    await _flutterSecureStorage.delete(key: key.name);
   }
 
   @override
   Future<T?> retrieve<T>(StoreKey key) async {
-    // TODO: implement retrieve
-    throw UnimplementedError();
+    if (T == String) {
+      return await _flutterSecureStorage.read(key: key.name) as T?;
+    }
+    return null;
   }
 
   @override
   save<T>(StoreKey key, value) async {
-    // TODO: implement save
-    throw UnimplementedError();
+    if (T == String) {
+      await _flutterSecureStorage.write(key: key.name, value: value);
+    }
   }
 }

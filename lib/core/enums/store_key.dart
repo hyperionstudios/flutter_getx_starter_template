@@ -3,4 +3,6 @@ enum StoreKey {
   userEmail,
   confirmed,
   roles,
+  access,
+  refresh,
 }

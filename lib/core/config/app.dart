@@ -9,6 +9,7 @@ import '../themes/dark.dart';
 import '../themes/light.dart';
 import '../themes/theme.dart';
 import 'api_router.dart';
+import 'user.dart';
 
 class App {
   /// init app
@@ -23,5 +24,6 @@ class App {
     await Get.putAsync<CoreTheme>(() => DarkTheme().init(), tag: ThemeTag.dark.name);
     await Get.putAsync<ActiveTheme>(() => ActiveTheme().init(),
         permanent: true, tag: ThemeTag.active.name);
+    await UserConfig.init();
   }
 }

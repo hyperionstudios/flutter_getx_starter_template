@@ -13,14 +13,12 @@ class AppStore implements CoreStore {
 
   @override
   clear() async {
-    // TODO: implement clear
-    throw UnimplementedError();
+    await _sharedPreferences.clear();
   }
 
   @override
   remove(StoreKey key) async {
-    // TODO: implement remove
-    throw UnimplementedError();
+    await _sharedPreferences.remove(key.toString());
   }
 
   @override
