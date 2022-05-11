@@ -25,13 +25,28 @@ class AppStore implements CoreStore {
 
   @override
   Future<T?> retrieve<T>(StoreKey key) async {
-    // TODO: implement retrieve
-    throw UnimplementedError();
+    if (T == String) {
+      return _sharedPreferences.getString(key.toString()) as T?;
+    }
+    if (T == bool) {
+      return _sharedPreferences.getBool(key.toString()) as T?;
+    }
+    if (T == List<String>) {
+      return _sharedPreferences.getStringList(key.toString()) as T?;
+    }
+    return null;
   }
 
   @override
   save<T>(StoreKey key, value) async {
-    // TODO: implement save
-    throw UnimplementedError();
+    if (T == String) {
+      await _sharedPreferences.setString(key.toString(), value as String);
+    }
+    if (T == bool) {
+      await _sharedPreferences.setBool(key.toString(), value as bool);
+    }
+    if (T == List<String>) {
+      await _sharedPreferences.setStringList(key.toString(), value as List<String>);
+    }
   }
 }

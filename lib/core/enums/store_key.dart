@@ -1,1 +1,6 @@
-enum StoreKey { workDir }
+enum StoreKey {
+  userId,
+  userEmail,
+  confirmed,
+  roles,
+}
