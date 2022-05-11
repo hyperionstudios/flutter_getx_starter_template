@@ -12,9 +12,6 @@ import 'api_router.dart';
 import 'user.dart';
 
 class App {
-  /// init app
-  /// initial route - prepare app
-  /// check Docker
   static init() async {
     await Get.putAsync<AppStore>(() => AppStore().init(), permanent: true);
     await Get.putAsync<SecureStore>(() => SecureStore().init(), permanent: true);
